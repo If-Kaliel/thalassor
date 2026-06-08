@@ -17,13 +17,17 @@ public class HomeResource {
         return Response.ok(Map.of(
                 "projeto", "Thalassor",
                 "status", "API em execução",
+                "descricao", "API para monitoramento de focos de poluição marinha com apoio de imagens orbitais.",
+                "documentacao", Map.of(
+                        "swagger", "/swagger",
+                        "openapi", "/q/openapi"
+                ),
                 "endpoints", Map.of(
                         "usuarios", "/usuarios",
                         "regioes", "/regioes",
+                        "embarcacoes", "/embarcacoes",
                         "focos", "/focos",
-                        "ordens", "/ordens",
-                        "swagger", "/swagger",
-                        "devUi", "/q/dev-ui"
+                        "ordens", "/ordens"
                 )
         )).build();
     }
